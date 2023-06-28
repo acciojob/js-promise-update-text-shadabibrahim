@@ -1,12 +1,20 @@
 //your JS code here. If required.
-let out = document.querySelector("#id");
+function greet() {
 	let data = new Promise((resolve,reject)=>{
 		setTimeOut(()=>{
 			resolve("Hello,world!")
 		},1000)
 	})
+	return data
+}
 
-data.then((item)=>{
-	out.innerHTML = item;
-})
+// function call
 
+greet(){
+	.then((item)=>{
+		let result = document.querySelector("#output");
+		result.textContent = item;
+	})
+	.catch(error => {
+    console.error(error);
+}
